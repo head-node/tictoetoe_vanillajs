@@ -33,7 +33,7 @@ const savePlayersName = () => {
     profileContainer.style.display = 'none';
 };
 
-const playAgain = () =>{
+const playAgain = () => {
     // function to reset the boards and variables to reset the game for current players
     player1Moves = [];
     player2Moves = [];
@@ -41,14 +41,21 @@ const playAgain = () =>{
     winner = -1;
     winnerElement.textContent = '';
     playAgainButton.style.display = 'none';
-    gridContainer.innerHTML = ''; 
+    gridContainer.innerHTML = '';
     initializeGame();
 }
 
 const initializeGame = () => {
     // entry function to create board and selecting the initial player
-    gridContainer.style.opacity = '0.1';
-    gridContainer.style.pointerEvents = 'none'; 
+    if (player1Name && player2Name) {
+        gridContainer.style.opacity = '1';
+        gridContainer.style.pointerEvents = 'all';
+    }
+    else {
+        gridContainer.style.opacity = '0.1';
+        gridContainer.style.pointerEvents = 'none';
+    }
+
     current = Math.floor(Math.random() * 2) + 1;
     initial = current === 1 ? 'X' : 'O';
 
