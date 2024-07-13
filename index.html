@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>
+        Want to add little Nostalgia to Life,
+        Let's have Tic Tac Toe
+    </h1>
+    <div id="profileContainer">
+        <label for="player1"> Player 1 Name
+            <input type="text" id="player1" onchange="handleInputChange(event, id)">
+        </label>
+        <label for="player2"> Player 2 Name
+            <input type="text" id="player2" onchange="handleInputChange(event, id)">
+        </label>
+        <button id="save" onclick="savePlayersName()">Save</button>
+    </div>
+
+    <h3 id="player1Name"></h3>
+    <h3 id="player2Name"></h3>
+    <div id="grid-container">
+    </div>
+    <h2 id="winner">
+    </h2>
+    <div id="winning-line"></div>
+    <button id="play-again" onclick="playAgain()">Play Again</button>
+    <script src="./index.js">
+    </script>
+</body>
+
+</html>
